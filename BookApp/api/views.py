@@ -4,7 +4,6 @@ from supabase import create_client
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
-import json
 
 # Initialize the model and tokenizer
 model = AutoModel.from_pretrained("avsolatorio/NoInstruct-small-Embedding-v0")
