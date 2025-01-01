@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommend Books</title>
+</head>
+<body>
+    <h1>Recommend Books</h1>
+    <form method="POST" action="/api/recommend/">
+        {% csrf_token %}
+        <label for="user_id">User ID:</label>
+        <input type="number" id="user_id" name="user_id" required><br>
+
+        <label for="top_n">Top N Recommendations:</label>
+        <input type="number" id="top_n" name="top_n" value="10"><br>
+
+        <label for="similarity_threshold">Similarity Threshold:</label>
+        <input type="number" id="similarity_threshold" name="similarity_threshold" step="0.1" value="0.8"><br>
+
+        <button type="submit">Get Recommendations</button>
+    </form>
+</body>
+</html>

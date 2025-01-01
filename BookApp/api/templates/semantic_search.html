@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Semantic Search</title>
+</head>
+<body>
+    <h1>Semantic Search</h1>
+    <form method="POST" action="/api/semantic_search/">
+        {% csrf_token %}
+        <label for="query">Query:</label>
+        <input type="text" id="query" name="query" required><br>
+
+        <label for="match_threshold">Match Threshold:</label>
+        <input type="number" id="match_threshold" name="match_threshold" step="0.1" value="0.7"><br>
+
+        <label for="match_count">Match Count:</label>
+        <input type="number" id="match_count" name="match_count" value="10"><br>
+
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
